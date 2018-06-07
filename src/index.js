@@ -1,17 +1,26 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
+import React, { Component } from "react";
+import ReactDom from "react-dom";
 
-const styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center',
-};
+class Board extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      boardMap: this.getBoardMap()
+    };
+    this.getBoardMap = this.getBoardMap.bind(this);
+  }
 
-const App = () => (
-  <div style={styles}>
-    <Hello name="CodeSandbox" />
-    <h2>Start editing to see some magic happen {'\u2728'}</h2>
-  </div>
-);
-
-render(<App />, document.getElementById('root'));
+  getBoardMap() {
+    const tempMap = [];
+    for (var i = 1; i < 10; i++) {
+      tempMap.push({ id: i, value: Math.floor(Math.random() * 100 + 1) });
+    }
+  }
+  render() {
+    return (
+      <div>
+        <ul class="flex-container wrap" />
+      </div>
+    );
+  }
+}
