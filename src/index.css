@@ -11,6 +11,15 @@
   display: -webkit-flex;
   display: flex;
 }
+.board {
+  width: 100%;
+  height: 100%;
+}
+.fix {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
 
 .nowrap {
   -webkit-flex-wrap: nowrap;
@@ -35,10 +44,10 @@
 
 .item {
   background: tomato;
-  padding: 5px;
+  padding: 0px;
   width: 100px;
   height: 100px;
-  margin: 10px;
+  margin: 2px;
 
   line-height: 100px;
   color: white;
